@@ -1,0 +1,4 @@
+new font run ==> npx react-native-asset
+adb reverse tcp:8081 tcp:8081
+reset cach ==> react-native start --reset-cache
+npx react-native run-android

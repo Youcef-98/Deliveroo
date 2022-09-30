@@ -1,0 +1,9 @@
+export const greenColor = "#00CCBB";
+export const whiteColor = "#FFFFFF";
+export const whiteTextColor = "#FFFFFF";
+export const greybgImage = "#B3B3B3";
+export const greyTextLight = "#B8B8B8";
+export const blackText = "#000000";
+export const greybgTextInput = "#e6e6e6";
+export const greenRestaurantsStars = "#90EE90";
+export const greyText = "grey";
