@@ -6,7 +6,7 @@ import {useNavigation} from '@react-navigation/native';
 import {useSelector} from 'react-redux';
 import DeliveryTimeCard from '../../components/DeliveryTimeCard/DeliveryTimeCard';
 import selectRestaurant from '../../Redux/Reducers/restaurantSlice';
-// import MapView from 'react-native-maps';
+import MapView from 'react-native-maps';
 const Delivery = () => {
   const navigation = useNavigation();
   //const restaurant = useSelector(selectRestaurant);
@@ -24,18 +24,16 @@ const Delivery = () => {
         </View>
         <DeliveryTimeCard />
       </SafeAreaView>
-      {/* <MapView
+      <MapView
         initialRegion={{
           latitude: 36.74443325022872,
-          longtitude: 3.0621307851058384,
+          longitude: 3.0621307851058384,
           latitudeDelta: 0.005,
           longitudeDelta: 0.005,
         }}
-        style={{elevation: 0, flex: 1, marginTop: -10}}
-        mapType="mutedStandard"
-      /> */}
+        style={{elevation: 0, flex: 1, marginTop: -30}}
+      />
 
-      <View style={{backgroundColor: 'red', flex: 1}}></View>
       <SafeAreaView style={{}}>
         <Text>hello</Text>
       </SafeAreaView>
