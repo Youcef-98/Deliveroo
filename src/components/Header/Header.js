@@ -34,7 +34,7 @@ const Header = () => {
         />
 
         <View style={{paddingHorizontal: 10, flex: 1}}>
-          <Text style={{color: greyTextLight, fontWeight: 'bold'}}>
+          <Text style={{color: greyTextLight, fontFamily: 'Rubik-Regular'}}>
             Deliver Now!
           </Text>
           <Text

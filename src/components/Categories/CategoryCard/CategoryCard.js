@@ -20,7 +20,7 @@ const CategoryCard = props => {
           left: 5,
           color: whiteTextColor,
           fontSize: 15,
-          fontFamily: 'RubikSemiBold',
+          fontFamily: 'Rubik-SemiBold',
         }}>
         {props.title}
       </Text>
