@@ -6,14 +6,17 @@ import {useNavigation} from '@react-navigation/native';
 import {useSelector} from 'react-redux';
 import DeliveryTimeCard from '../../components/DeliveryTimeCard/DeliveryTimeCard';
 import selectRestaurant from '../../Redux/Reducers/restaurantSlice';
-import MapView from 'react-native-maps';
-import {Marker} from 'react-native-maps';
+import MapView, {Marker} from 'react-native-maps';
 import DeliveryFooter from '../../components/DeliveryFooter/DeliveryFooter';
-import {NavigationActions, StackActions} from 'react-navigation';
+
+const cord = [
+  {
+    latitude: 36.80191318456871,
+    longitude: 3.0461646468869312,
+  },
+];
 const Delivery = () => {
   const navigation = useNavigation();
-  //const restaurant = useSelector(selectRestaurant);
-  //const restaurant = useSelector(selectRestaurant);
   return (
     <View style={{flex: 1, backgroundColor: greenColor}}>
       <SafeAreaView style={{zIndex: 1}}>
@@ -45,19 +48,18 @@ const Delivery = () => {
           latitudeDelta: 0.005,
           longitudeDelta: 0.005,
         }}
-        style={{flex: 1, marginTop: -50}}
-      />
-      <Marker
-        key={1}
-        coordinate={{
-          latitude: 36.80191318456871,
-          longitude: 3.0461646468869312,
-        }}
-        title={'hello'}
-        description={'hehehehehehehe hbcjahdjhdf dabdhadgb'}
-        identifier="origin"
-        pinColor={greenColor}
-      />
+        style={{flex: 1, marginTop: -50}}>
+        {cord.map(marker => (
+          <Marker
+            key={1}
+            coordinate={marker}
+            title={'marker.title'}
+            description={'marker.description'}
+            identifier="origin"
+            pinColor={greenColor}
+          />
+        ))}
+      </MapView>
 
       <DeliveryFooter />
     </View>
