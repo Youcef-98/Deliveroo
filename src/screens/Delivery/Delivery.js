@@ -15,6 +15,7 @@ const cord = [
     longitude: 3.0461646468869312,
   },
 ];
+const rider_number = '+213000000000';
 const Delivery = () => {
   const navigation = useNavigation();
   return (
@@ -61,7 +62,7 @@ const Delivery = () => {
         ))}
       </MapView>
 
-      <DeliveryFooter />
+      <DeliveryFooter number={rider_number} />
     </View>
   );
 };

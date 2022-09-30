@@ -1,4 +1,11 @@
-import {View, Text, SafeAreaView, Image} from 'react-native';
+import {
+  View,
+  Text,
+  SafeAreaView,
+  Image,
+  TouchableOpacity,
+  Linking,
+} from 'react-native';
 import React from 'react';
 import {
   blackText,
@@ -8,7 +15,7 @@ import {
   whiteColor,
 } from '../../../assets/colors';
 
-const DeliveryFooter = () => {
+const DeliveryFooter = props => {
   return (
     <SafeAreaView
       style={{
@@ -31,11 +38,13 @@ const DeliveryFooter = () => {
       />
       <View style={{flex: 1, marginHorizontal: 20}}>
         <Text style={{fontSize: 16, color: blackText}}>Sonny Sangha</Text>
-        <Text style={{fontSize: 14, color: greyTextLight}}>Your Rider</Text>
+        <Text style={{fontSize: 14, color: greyTextLight}}>{props.number}</Text>
       </View>
-      <Text style={{fontSize: 15, color: greenColor, fontWeight: 'bold'}}>
-        Call
-      </Text>
+      <TouchableOpacity onPress={() => Linking.openURL(`tel:${props.number}`)}>
+        <Text style={{fontSize: 15, color: greenColor, fontWeight: 'bold'}}>
+          Call
+        </Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
