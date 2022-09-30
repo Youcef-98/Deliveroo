@@ -64,3 +64,4 @@ buck-out/
 /vendor/bundle/
 
 ./tuto.txt
+./keys.txt
